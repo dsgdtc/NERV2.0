@@ -1,0 +1,2 @@
+use:python nerv.py
+execute ./install.sh to setup this tool

@@ -1,0 +1,9 @@
+2016-05-22 13:31:12,625 command_tool.py[line:87] INFO ----------------------------------------------------------------------------------------------------
+2016-05-22 13:31:12,626 command_tool.py[line:88] INFO spawn ssh root@192.168.0.4 /root/script/cmd.sh
+ssh: connect to host 192.168.0.4 port 22: Connection timed out
+2016-05-22 13:31:12,627 command_tool.py[line:87] INFO ----------------------------------------------------------------------------------------------------
+2016-05-22 13:31:12,628 command_tool.py[line:88] INFO spawn ssh tester@192.168.0.5 /root/script/cmd.sh
+ssh: connect to host 192.168.0.5 port 22: Connection timed out
+2016-05-22 13:31:12,629 command_tool.py[line:87] INFO ----------------------------------------------------------------------------------------------------
+2016-05-22 13:31:12,629 command_tool.py[line:88] INFO spawn ssh root@192.168.0.3 /root/script/cmd.sh
+ssh: connect to host 192.168.0.3 port 22: Connection timed out
