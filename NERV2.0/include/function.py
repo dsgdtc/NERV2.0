@@ -12,6 +12,7 @@ from readconfig import LogFormat
 WORKDIR = readconfig.WORKDIR
 def choose():
 	choose = raw_input("\033[0;32minput your choice:\033[0m").strip()
+	#choose = raw_input("input your choice:").strip()
 	return choose
 
 class Common(ReadConf):
@@ -19,7 +20,8 @@ class Common(ReadConf):
 	def __init__(self):
 		self._process_num = ReadConf().process_num
 		self._default_user = ReadConf().default_user
-		self._all_group = ReadConf().all_group_name
+#		self._all_group = ReadConf().all_group_name
+		self._all_group = ReadConf().all_group_id
 		self._global_cmdsh_dir = ReadConf().global_cmdsh_dir
 		#LogFormat().logging.info("test:" %self._global_cmdsh_dir)	
 #		self._workdir = ReadConf().WORKDIR
@@ -114,12 +116,14 @@ class SendFiles(ShowServer):
 		else:
 			Common().show_group(g_num)
 
-		add1=raw_input("\033[0;32m本地文件(绝对路径):\033[0m").strip()
+#		add1=raw_input("\033[0;32m本地文件(绝对路径):\033[0m").strip()
+		add1=raw_input("本地文件(绝对路径):").strip()
 		if not add1:
 			print "\n\033[33;40;1m输入的是空文件,请重新选择.\033[0m "
 			return
 		if add1 == 'quit' or add1 == 'exit':return
-		add2=raw_input("\033[0;32m远端服务器目的地址(绝对路径):\033[0m").strip()
+#		add2=raw_input("\033[0;32m远端服务器目的地址(绝对路径):\033[0m").strip()
+		add2=raw_input("远端服务器目的地址(绝对路径):").strip()
 		if not add2:
 			print "\n\033[33;40;1m输入的是空文件,请重新选择.\033[0m "
 			return
@@ -157,7 +161,8 @@ class ExecuteCommand(ShowServer):
 			return
 		else:
 			Common().show_group(g_num)
-		cmd=raw_input("\033[0;32m输入要执行的命令(不能带引号):\033[0m").strip()
+#		cmd=raw_input("\033[0;32m输入要执行的命令(不能带引号):\033[0m").strip()
+		cmd=raw_input("输入要执行的命令(不能带引号):").strip()
 		if not cmd:
 			print "\n\033[33;40;1m输入的是空指令,请重新选择.\033[0m "
 			return

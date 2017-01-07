@@ -1,3 +1,4 @@
+#! /usr/bin/env python2
 # -*- coding:utf-8 -*-
 import os,sys
 from include import tab
@@ -5,11 +6,13 @@ from include import showmenu
 from include import readconfig
 from include import function 
 from include import headline
-from termcolor import colored
+#from include.termcolor import termcolor
+from include.termcolor import colored
+#from termcolor import colored
 
 
 showmenus=showmenu.ShowMenu(0)
-headline
+#headline.head_line()
 while True:
 	showmenus.main_menu()
 	try:

@@ -30,7 +30,7 @@ class ReadConf(LogFormat):
 		os._exit(0)
 
 	def __init__(self):
-		self.all_group_name = self.config_group.keys()
+		self.all_group_id = self.config_group.keys() # This is not group name ,it is group id
 		self.process_num = self.config["global"]["process_num"]
 		self.default_user = self.config["global"]["default_user"]
 		self.global_cmdsh_dir = self.config["global"]["global_cmdsh_dir"]
@@ -100,7 +100,7 @@ def check_ssh_method():
 			print "\033[1;35m%s  不支持这种SSH认证方式,请修改./conf/server.conf文件\033[0m" % method
 
 def check_group_id():
-	for item in readconf.all_group_name:
+	for item in readconf.all_group_id:
 		if item.isdigit():pass
 		else:
 			global CHECK_FLAG
@@ -112,8 +112,9 @@ def check_server_lookup():
 	for item in readconf.read_server_list():
 		server_and_user.append([item[1],item[2]])
 	
-	for item in range(len(readconf.all_group_name)):
-		gid = item + 1
+#	print readconf.all_group_id
+	for item in readconf.all_group_id:
+		gid = item
 		group_content = readconf.read_group_content(str(gid))
 		for server in group_content:
 			server_ip = ReadConf().re_ip(server)
@@ -150,10 +151,10 @@ if CHECK_FLAG == '1':
 if __name__ == '__main__':
 	pass
 	LogFormat().logging.info('hahaha')
-#	print "ReadConf().all_group_name:\n" ,ReadConf().all_group_name
+#	print "ReadConf().all_group_id:\n" ,ReadConf().all_group_id
 #	print "ReadConf().process_num:\n" ,ReadConf().process_num
 #	print "ReadConf().default_user:\n" ,ReadConf().default_user
-#	print "ReadConf().read_server_list():\n" ,ReadConf().read_server_list()
+	print "ReadConf().read_server_list():\n" ,ReadConf().read_server_list()
 #	print "ReadConf().read_server_dict():\n" ,ReadConf().read_server_dict()
 #	print "ReadConf().read_group_name('1'):\n" ,ReadConf().read_group_name('1')
 #	print "ReadConf().read_group_content('1'):\n" ,ReadConf().read_group_content('1')

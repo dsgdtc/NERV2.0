@@ -1,2 +1,19 @@
-use:python nerv.py
-execute ./install.sh to setup this tool
+use:python nerv.py or ./nerv.py
+execute sh ./install.sh to setup this tool
+configfile: ./conf/*.conf
+
+使用方法:python nerv.py或者./nerv.py
+安装方法:执行 sh ./install.sh
+配置文件路径:./conf/*.conf
+
+
+%change log
+* 2017-06-01 guyu<fangcun727@aliyum.com> - 2.1.2
+- bugfix for line breaks
+- modify install.sh
+
+* 2016-8-31 guyu<fangcun727@aliyum.com> - 2.1.1
+- modify install.sh, put prettycolor.py into include dir, bugfix in command_tool.py:convert error_flag from unicode to utf-8
+
+* 2016-7-6 guyu<fangcun727@aliyum.com> - 2.0.1
+- change spawn ssh balabala to spawn ssh -tt balabala.Solve bug: some commands(eg:service avllistener start) are unable to kill child process

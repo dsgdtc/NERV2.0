@@ -18,4 +18,5 @@ atexit.register(readline.write_history_file, histfile)
 
 del os, histfile, readline, rlcompleter
 
-
+#cmd=raw_input('imput your choice:imput your choice:imput your choice:imput your choice:imput your choice:')
+#print cmd

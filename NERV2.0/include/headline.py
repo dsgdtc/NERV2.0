@@ -15,7 +15,7 @@ HeadLine='''\033[32;1m
 |       software.                                                                                                             |
 |                                                                                                                             |\033[31;1m
 |       Please be careful with your opreations because right now the key of managing the whole network is in your hand.	      |	
-|       You must be very clear about any instructions you input before sending them.                                          |
+|       You must be very clear about any instruction you input before sending them.                                           |
 |       注意,你可以拥有所有的root权限！                                                                                       |\033[32;1m
 |                                                                                                                             |
 |                                                                                                                             |
@@ -37,7 +37,7 @@ HeadLine100='''\033[32;1m
 |   through this software.                                                                     |
 |                                                                                              |\033[31;1m
 |   Please be careful with your opreations because right now the key of managing the           | 
-|   whole network is in your hand. You must be very clear about any instructions you input     |
+|   whole network is in your hand. You must be very clear about any instruction you input      |
 |   before sending them.                                                                       |
 |                                                                                              |
 |   注意,你可以拥有所有的root权限！                                                            |\033[32;1m
@@ -60,7 +60,7 @@ HeadLine65='''\033[32;1m
 |                                                               |\033[31;1m
 |   Please be careful with your opreations because right now    |
 |   the key of managing the whole network is in your hand.      |
-|   You must be very clear about any instructions you input     |
+|   You must be very clear about any instruction you input      |
 |   before sending them.                                        |
 |   注意,你可以拥有所有的root权限！                             |\033[32;1m
 |                                                               |
@@ -79,5 +79,3 @@ def head_line():
 		#print T_size
 
 head_line()
-
-
